@@ -25,7 +25,7 @@ When the cursor is replaced at `return`, `i;` selects `return 0;` and `a;` selec
 
 ## More complecated operator-pending mappings
 
-If you set `g:textobj_clang_more_mapping` to `1`, many operator-pending mappings are defined.  As a default mappings in a below table are defined.  You can control the number of the mappings, use `g:textobj_clang_mapping_kinds`.
+If you set `g:textobj_clang_more_mapping` to `1`, many operator-pending mappings are defined.  As a default, mappings in a below table are defined.  You can control the number of the mappings with `g:textobj_clang_mapping_kinds`.
 
 <table>
     <tr>
@@ -33,35 +33,35 @@ If you set `g:textobj_clang_more_mapping` to `1`, many operator-pending mappings
         <th>Block</th>
     </tr>
     <tr>
-        <td>`i;a`</td>
+        <td>i;a</td>
         <td>select the most inner definition</td>
     </tr>
     <tr>
-        <td>`i;c`</td>
+        <td>i;c</td>
         <td>select class blocks</td>
     </tr>
     <tr>
-        <td>`i;f`</td>
+        <td>i;f</td>
         <td>select function blocks</td>
     </tr>
     <tr>
-        <td>`i;e`</td>
+        <td>i;e</td>
         <td>select an expression</td>
     </tr>
     <tr>
-        <td>`i;s`</td>
+        <td>i;s</td>
         <td>select an statement</td>
     </tr>
     <tr>
-        <td>`i;p`</td>
+        <td>i;p</td>
         <td>select an parameter and a template parameter</td>
     </tr>
     <tr>
-        <td>`i;n`</td>
+        <td>i;n</td>
         <td>select a namespace</td>
     </tr>
     <tr>
-        <td>`i;u`</td>
+        <td>i;u</td>
         <td>select an element under cursor</td>
     </tr>
 </table>
