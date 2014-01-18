@@ -4,8 +4,8 @@ function! s:select(func)
         return 0
     endif
     let pos = getpos('.')
-    let start = [pos[0], extent.range.start.line, extent.range.start.column, pos[3]]
-    let end = [pos[0], extent.range.end.line, extent.range.end.column, pos[3]]
+    let start = [pos[0], extent.start.line, extent.start.column, pos[3]]
+    let end = [pos[0], extent.end.line, extent.end.column, pos[3]]
     return ['v', start, end]
 endfunction
 
