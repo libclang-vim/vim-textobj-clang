@@ -1,4 +1,4 @@
-if exists('g:loaded_clang')
+if exists('g:loaded_textobj_clang')
     finish
 endif
 
@@ -28,4 +28,4 @@ call textobj#user#plugin('clang', s:spec)
 let &cpo = s:save_cpo
 unlet s:save_cpo
 
-let g:loaded_clang = 1
+let g:loaded_textobj_clang = 1
