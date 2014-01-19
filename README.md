@@ -44,7 +44,7 @@ If you set `g:textobj_clang_more_mapping` to `1`, many operator-pending mappings
         <th>Block</th>
     </tr>
     <tr>
-        <td>i;a</td>
+        <td>i;m</td>
         <td>select the most inner definition</td>
     </tr>
     <tr>
@@ -74,6 +74,10 @@ If you set `g:textobj_clang_more_mapping` to `1`, many operator-pending mappings
     <tr>
         <td>i;u</td>
         <td>select an element under cursor</td>
+    </tr>
+    <tr>
+        <td>i;a</td>
+        <td>select expression, statement, function, class or namespace</td>
     </tr>
 </table>
 

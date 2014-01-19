@@ -9,7 +9,7 @@ let g:textobj_clang_more_mapping = get(g:, 'textobj_ruby_more_mappings', 0)
 let s:spec = {}
 
 if g:textobj_clang_more_mapping
-    let g:textobj_clang_mapping_kinds = get(g:, 'textobj_clang_kinds', ['any', 'class', 'function', 'expression', 'statement', 'parameter', 'namespace', 'under_cursor'])
+    let g:textobj_clang_mapping_kinds = get(g:, 'textobj_clang_kinds', ['any', 'class', 'function', 'expression', 'statement', 'parameter', 'namespace', 'under_cursor', 'most_inner'])
     for s:name in g:textobj_clang_mapping_kinds
         let s:spec[s:name] = {
                     \ 'select-i' : 'i;'.s:name[0],
