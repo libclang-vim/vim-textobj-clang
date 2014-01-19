@@ -42,4 +42,18 @@ function! textobj#clang#most_inner_select_i()
 endfunction
 
 function! textobj#clang#any_select_i()
+    let extents = libclang#location#all_extents(expand('%'), line('.'), col('.'))
+    let len = len(extents)
+    if len == 0
+        return 0
+    elseif len == 1
+        let extent = extents[0]
+    else
+        let extent = extents[1]
+    endif
+
+    let pos = getpos('.')
+    let start = [pos[0], extent.start.line, extent.start.column, pos[3]]
+    let end = [pos[0], extent.end.line, extent.end.column, pos[3]]
+    return ['v', start, end]
 endfunction
