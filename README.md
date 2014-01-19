@@ -21,7 +21,7 @@ NeoBundleLazy 'rhysd/vim-textobj-clang', {
 
 ## Simple one operator-pending mapping `i;` and `a;`
 
-Operator-pending mapping `i;` and `a;` add simple function of this plugin.  `i;` selects the element under cursor.  `a;` selects the most inner definition under cursor.
+Operator-pending mapping `i;` and `a;` are available.  `i;` selects the element under cursor.  `a;` selects the most inner definition under cursor.
 
 For example, see below code.
 
