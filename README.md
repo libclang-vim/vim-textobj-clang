@@ -33,6 +33,7 @@ int main()
 ```
 
 When the cursor is replaced at `return`, `i;` selects `return 0;` and `a;` selects whole `main()` function.
+This is very simple example.  Clang can parse more complecated source files like Boost libraries.
 
 ## More complecated operator-pending mappings
 
