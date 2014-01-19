@@ -1,5 +1,21 @@
+function! s:prepare_temp_file()
+    let temp_name = expand('%:p:h') . substitute(tempname(), '\W', '_', 'g') . '.cpp'
+    if filereadable(temp_name)
+        throw "Temporary file already exists."
+    endif
+
+    call writefile(getline(1, '$'), temp_name)
+
+    return temp_name
+endfunction
+
 function! s:select_extent(func)
-    let extent = call(a:func, [expand('%'), line('.'), col('.')])
+    let temp_name = s:prepare_temp_file()
+    try
+        let extent = call(a:func, [temp_name, line('.'), col('.')])
+    finally
+        call delete(temp_name)
+    endtry
     if empty(extent) || extent.start.file !=# extent.end.file
         return 0
     endif
@@ -42,7 +58,12 @@ function! textobj#clang#most_inner_select_i()
 endfunction
 
 function! textobj#clang#any_select_i()
-    let extents = libclang#location#all_extents(expand('%'), line('.'), col('.'))
+    let temp_name = s:prepare_temp_file()
+    try
+        let extents = libclang#location#all_extents(temp_name, line('.'), col('.'))
+    finally
+        call delete(temp_name)
+    endtry
     let len = len(extents)
     if len == 0
         return 0
