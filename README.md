@@ -14,7 +14,7 @@ If you use [neobundle.vim](https://github.com/Shougo/neobundle.vim), you can ins
 NeoBundleLazy 'rhysd/vim-textobj-clang', {
             \ 'depends' : 'kana/vim-textobj-user',
             \ 'autoload' : {
-            \       'mappings' : [['xo', 'a;'], ['xo', 'ib']]
+            \       'mappings' : [['xo', 'a;'], ['xo', 'i;']]
             \   }
             \ }
 ```
