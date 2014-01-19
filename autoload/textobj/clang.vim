@@ -49,7 +49,12 @@ function! textobj#clang#any_select_i()
     elseif len == 1
         let extent = extents[0]
     else
-        let extent = extents[1]
+        let idx = 1
+        while extents[idx] == extents[0]
+            if idx == len - 1 | break | endif
+            let idx += 1
+        endwhile
+        let extent = extents[idx]
     endif
 
     let pos = getpos('.')
