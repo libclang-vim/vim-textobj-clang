@@ -1,6 +1,6 @@
 function! s:select(func)
     let extent = call(a:func, [expand('%'), line('.'), col('.')])
-    if empty(extent)
+    if empty(extent) || extent.start.file !=# extent.end.file
         return 0
     endif
     let pos = getpos('.')
