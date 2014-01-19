@@ -4,7 +4,7 @@ function! s:prepare_temp_file()
         throw "Temporary file already exists."
     endif
 
-    call writefile(map(getline(1, '$'), 'v:val =~# "^\\s*#include\\s*<[^>]\\+>" ? "" : v:val'), temp_name)
+    call writefile(map(getline(1, '$'), 'v:val =~# "^\\s*#include\\s*\\(<[^>]\\+>\\|\"[^\"]\\+\"\\)" ? "" : v:val'), temp_name)
 
     return temp_name
 endfunction
