@@ -1,8 +1,6 @@
 function! s:prepare_temp_file()
     let temp_name = expand('%:p:h') . substitute(tempname(), '\W', '_', 'g') . '.cpp'
-    if filereadable(temp_name)
-        throw "Temporary file already exists."
-    endif
+    let temp_name = tempname() . (&filetype ==# 'c' ? '.c' : '.cpp')
 
     call writefile(map(getline(1, '$'), 'v:val =~# "^\\s*#include\\s*\\(<[^>]\\+>\\|\"[^\"]\\+\"\\)" ? "" : v:val'), temp_name)
 
