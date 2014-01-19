@@ -8,6 +8,17 @@ This vim plugin makes text objects for various C and C++ blocks, funciton, class
 - [vim-textobj-user](https://github.com/kana/vim-textobj-user)
 - [libclang-vim](https://github.com/rhysd/libclang-vim)
 
+If you use [neobundle.vim](https://github.com/Shougo/neobundle.vim), you can install easily as below.
+
+```vim
+NeoBundleLazy 'rhysd/vim-textobj-clang', {
+            \ 'depends' : 'kana/vim-textobj-user',
+            \ 'autoload' : {
+            \       'mappings' : [['xo', 'a;'], ['xo', 'ib']]
+            \   }
+            \ }
+```
+
 ## Simple one operator-pending mapping `i;` and `a;`
 
 Operator-pending mapping `i;` and `a;` add simple function of this plugin.  `i;` selects the element under cursor.  `a;` selects the most inner definition under cursor.
