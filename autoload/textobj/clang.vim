@@ -2,7 +2,11 @@ function! s:prepare_temp_file()
     let temp_name = expand('%:p:h') . substitute(tempname(), '\W', '_', 'g') . '.cpp'
     let temp_name = tempname() . (&filetype ==# 'c' ? '.c' : '.cpp')
 
-    call writefile(map(getline(1, '$'), 'v:val =~# "^\\s*#include\\s*\\(<[^>]\\+>\\|\"[^\"]\\+\"\\)" ? "" : v:val'), temp_name)
+    if g:textobj_clang_include_headers
+        call writefile(getline(1, '$'), temp_name)
+    else
+        call writefile(map(getline(1, '$'), 'v:val =~# "^\\s*#include\\s*\\(<[^>]\\+>\\|\"[^\"]\\+\"\\)" ? "" : v:val'), temp_name)
+    endif
 
     return temp_name
 endfunction

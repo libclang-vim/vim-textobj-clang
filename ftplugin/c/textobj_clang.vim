@@ -5,7 +5,8 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
-let g:textobj_clang_more_mapping = get(g:, 'textobj_ruby_more_mappings', 0)
+let g:textobj_clang_more_mapping = get(g:, 'textobj_clang_more_mappings', 0)
+let g:textobj_clang_include_headers = get(g:, 'textobj_clang_include_headers', 0)
 let s:spec = {}
 
 if g:textobj_clang_more_mapping
