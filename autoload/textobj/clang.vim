@@ -62,7 +62,7 @@ endfunction
 function! textobj#clang#any_select_i()
     let temp_name = s:prepare_temp_file()
     try
-        let extents = libclang#location#all_extents(temp_name, line('.'), col('.'))
+        let extents = filter(libclang#location#all_extents(temp_name, line('.'), col('.')), '!empty(v:val)')
     finally
         call delete(temp_name)
     endtry
