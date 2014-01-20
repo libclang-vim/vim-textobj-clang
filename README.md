@@ -43,6 +43,10 @@ int main()
 When the cursor is replaced at `return`, `i;` selects `return 0;` and `a;` selects whole `main()` function.
 This is very simple example.  Clang can parse more complecated source files like Boost libraries.
 
+Screenshot:
+
+![screenshot](http://gifzo.net/82IlUtfW1g.gif)
+
 ## More complecated operator-pending mappings
 
 If you set `g:textobj_clang_more_mapping` to `1`, many operator-pending mappings are defined.  As a default, mappings in a below table are defined.  You can control the number of the mappings with `g:textobj_clang_mapping_kinds`.
