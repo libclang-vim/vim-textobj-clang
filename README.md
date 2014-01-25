@@ -8,7 +8,7 @@ This vim plugin makes text objects for various C and C++ blocks, funciton, class
 - [vim-textobj-user](https://github.com/kana/vim-textobj-user)
 - [libclang-vim](https://github.com/rhysd/libclang-vim)
 
-If you use [neobundle.vim](https://github.com/Shougo/neobundle.vim), you can install easily as below.
+If you use [neobundle.vim](https://github.com/Shougo/neobundle.vim), you can install this plugin easily as below.
 
 ```vim
 NeoBundleLazy 'rhysd/libclang-vim', {
@@ -27,9 +27,9 @@ NeoBundleLazy 'rhysd/vim-textobj-clang', {
             \ }
 ```
 
-## Simple operator-pending mapping `i;` and `a;`
+## Simple operator-pending mappings `i;` and `a;`
 
-Operator-pending mapping `i;` and `a;` are available.  `i;` selects the element under cursor.  `a;` selects the most inner definition under cursor.
+Operator-pending mappings `i;` and `a;` are available.  `i;` selects the element under cursor.  `a;` selects the most inner definition under cursor.
 
 For example, see below code.
 
@@ -40,7 +40,7 @@ int main()
 }
 ```
 
-When the cursor is replaced at `return`, `i;` selects `return 0;` and `a;` selects whole `main()` function.
+When the cursor is placed at `return`, `i;` selects `return 0;` and `a;` selects whole `main()` function.
 This is very simple example.  Clang can parse more complecated source files like Boost libraries.
 
 Screenshot:
