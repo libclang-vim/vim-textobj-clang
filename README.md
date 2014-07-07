@@ -49,7 +49,7 @@ Screenshot:
 
 ## More complecated operator-pending mappings
 
-If you set `g:textobj_clang_more_mapping` to `1`, many operator-pending mappings are defined.  As a default, mappings in a below table are defined.  You can control the number of the mappings with `g:textobj_clang_mapping_kinds`.
+If you set `g:textobj_clang_more_mappings` to `1`, many operator-pending mappings are defined.  As a default, mappings in a below table are defined.  You can control the number of the mappings with `g:textobj_clang_mapping_kinds`.
 
 <table>
     <tr>
