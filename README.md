@@ -41,7 +41,7 @@ int main()
 ```
 
 When the cursor is placed at `return`, `i;` selects `return 0;` and `a;` selects whole `main()` function.
-This is very simple example.  Clang can parse more complecated source files like Boost libraries.
+This is very simple example.  Clang can parse more complicated source files like Boost libraries.
 
 Screenshot:
 
